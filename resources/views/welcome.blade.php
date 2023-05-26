@@ -16,8 +16,8 @@
     <div id="trade">
     </div>
     <div class="data-show" id="show">
-
     </div>
+
     <script type="module">
 //      var val=[];
 //     Echo.channel('stock-market').listen('GetRateEvent',(e)=>{
@@ -52,9 +52,13 @@ for (let property in val) {
 }
 document.getElementById("show").innerHTML = output;
 }
-setInterval(getstockdata,5000);
+// getstockdata();
+ setInterval(getstockdata,5000);
  </script>
-    {{-- <script src="{{asset('js/socket.js')}}"></script>  this is another way to implement websocket in js just uncomment if you want to test --}}
+
+    {{-- this data is coming from another api  which is in div trade --}}
+    <script src="{{ asset('js/socket.js') }}"></script>
+
 </body>
 
 </html>
